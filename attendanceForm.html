@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Attendance Form</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Font Awesome -->
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+  <style>
+    /* Custom styles */
+    .container {
+      margin-top: 50px;
+    }
+    .page-title {
+      font-size: 24px;
+      font-weight: bold;
+    }
+    .card {
+      margin-bottom: 20px;
+    }
+    .card-body {
+      padding: 20px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="card">
+      <div class="card-body">
+        <h2 class="page-title">Employee Attendance Form</h2>
+        <form id="attendanceForm" action="submit-attendance.php" method="POST">
+          <div class="form-group">
+            <label for="employeeId">Employee ID</label>
+            <input type="number" class="form-control" id="employeeId" name="employeeId" placeholder="Enter your employee ID" required>
+          </div>
+          <div class="form-group">
+            <label for="datePicker">Select Date</label>
+            <input type="date" class="form-control" id="datePicker" name="date" required>
+          </div>
+          <div class="form-group">
+            <label for="checkInTime">Check-in Time</label>
+            <input type="time" class="form-control" id="checkInTime" name="checkInTime" required>
+          </div>
+          <div class="form-group">
+            <label for="checkOutTime">Check-out Time</label>
+            <input type="time" class="form-control" id="checkOutTime" name="checkOutTime" required>
+          </div>
+          <div class="form-group">
+            <label for="status">Status</label>
+            <select class="form-control" id="status" name="status" required>
+              <option value="">Select status...</option>
+              <option value="Present">Present</option>
+              <option value="Absent">Absent</option>
+              <option value="Leave">Leave</option>
+            </select>
+          </div>
+          <input type="submit" class="btn btn-primary btn-block" placeholder="Submit">
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- Bootstrap JS, Popper.js, and jQuery -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <!-- Font Awesome JS -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/js/all.min.js"></script>
+</body>
+</html>
